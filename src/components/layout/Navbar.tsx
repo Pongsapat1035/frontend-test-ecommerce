@@ -18,7 +18,6 @@ const CartBadge = styled(Badge)`
     right: -6px;
   }
 `;
-import FilterTab from "../../pages/Products/components/FilterTab";
 import MobileFilter from "./MobileFilter";
 export default function Navbar() {
   const navigate = useNavigate();
