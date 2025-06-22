@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Product1",
+            "no": "12355",
+            "collection": "Best Seller",
+            "material": ["wood"],
+            "images": ["https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+            "price": 123,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },
+        {
+            "id": 2,
+            "name": "Product2",
+            "no": "12355",
+            "collection": "New Arrivals",
+            "material": ["metal"],
+            "images": [
+                "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1705169612225-c7f9e87430f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1598789858997-66ad403aa8e1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },
+        {
+            "id": 3,
+            "name": "Product3",
+            "no": "12355",
+            "collection": "Small Space",
+            "material": ["metal", "wood"],
+            "images": ["https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+            "price": 300,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 15
+        }
+    ]
+}

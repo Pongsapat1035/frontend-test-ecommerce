@@ -1,56 +1,45 @@
 import {
-  Button,
   Grid,
   Container,
-  Stack,
   Typography,
-  IconButton,
-  Skeleton,
+  Button,
 } from "@mui/material";
-import { Link, useNavigate } from "react-router";
-import ProductCard from "../../components/ProductCard";
-import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
+import {  useNavigate } from "react-router";
+
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
+import HeroGrid from "./components/HeroGrid";
 
 export default function HomePage() {
   const navigate = useNavigate();
+
   return (
     <Grid size="grow">
-      <Container disableGutters sx={{ height: "100%" }}>
-        <Grid size={12} height="auto" container direction="row" spacing={2}>
-          <Grid>
-            <Grid>
-              <Typography variant="h2" fontWeight="semibold">
-                Transform your space,
-              </Typography>
-              <Typography variant="h2">
-                Transform your life. At Loft.
-              </Typography>
+      <Container disableGutters sx={{ height: "100%", p: { xs: 2, lg: 0 } }}>
+        <Grid container direction="column" spacing={8} my={5}>
+          <Grid size={12} height="auto" container direction="row" spacing={2}>
+            <Grid size={12} container direction="row">
+              <Grid size="grow">
+                <Typography variant="h2" fontWeight="bold" sx={{ fontSize: { xs: '3rem', md: '4rem' } }}>
+                  Discovering
+                </Typography>
+                <Typography variant="h2" sx={{ fontSize: { xs: '3rem', md: '4rem' } }}>for your home</Typography>
+              </Grid>
+              <Grid size={{ xs: 6, sm: 4 }} container alignItems="end" justifyContent="end">
+                <Button
+                  variant="contained"
+                  sx={{
+                    bgcolor: "secondary.main",
+                    color: "primary.main",
+                    borderRadius: 10,
+                    px: { xs: 3, sm:6 },
+                  }}
+                  onClick={() => navigate("/product")}>
+                  Shop now <ArrowOutwardRoundedIcon />
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
-          <Grid container spacing={4}>
-            <Grid
-              size={12}
-              container
-              justifyContent="space-between"
-              alignItems="end">
-              <Stack direction="row" spacing={2} alignItems="end">
-                <Typography variant="h4">Top Product</Typography>
-                <Link to="/product">View more</Link>
-              </Stack>
-              <Stack direction="row" spacing={1}>
-                <IconButton>
-                  <ChevronLeftOutlinedIcon></ChevronLeftOutlinedIcon>
-                </IconButton>
-                <IconButton>
-                  <ChevronRightOutlinedIcon></ChevronRightOutlinedIcon>
-                </IconButton>
-              </Stack>
-            </Grid>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-          </Grid>
+          <HeroGrid></HeroGrid>
         </Grid>
       </Container>
     </Grid>
