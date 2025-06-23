@@ -6,7 +6,6 @@ import {
 } from "@mui/material";
 import {  useNavigate } from "react-router";
 
-import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import HeroGrid from "./components/HeroGrid";
 import Recommend from "./components/Recommend";
 import EastRoundedIcon from '@mui/icons-material/EastRounded';

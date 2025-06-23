@@ -1,5 +1,6 @@
 import { Grid, Box, Typography, IconButton } from "@mui/material";
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
+
 export default function HeroGrid() {
   return (
     <Grid
