@@ -21,6 +21,7 @@ export default function ProductImage({ images }: { images: string[] }) {
       setThumbnails(images.slice(1));
     }
   }, [images]);
+  
   return (
     <Grid container size={{ sm: 12, md: 6 }} spacing={2} direction="column" sx={{ p: { xs:2, sm: 4, md: 0 } }}>
       <Grid size={12} sx={{ height: { xs: 400, sm: 500 }, borderRadius: 2, overflow: "hidden" }}>

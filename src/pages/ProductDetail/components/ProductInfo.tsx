@@ -13,9 +13,12 @@ import AccordionTag from "../../../components/AccordionTag";
 import type { ProductData } from "../../../type";
 import { useState } from "react";
 import { useCart } from "../../../cartContext";
+
+
 export default function ProductInfo({ data }: { data: ProductData }) {
   const [quantity, setQuantity] = useState<number>(1);
   const { addToCart } = useCart()
+  
   const updateQuantity = (mode: string) => {
     if (mode === "increase" && quantity !== data.quantity) {
       setQuantity(quantity + 1);
@@ -23,8 +26,6 @@ export default function ProductInfo({ data }: { data: ProductData }) {
       setQuantity(quantity - 1);
     }
   };
-
- 
 
   return (
     <Grid size={{ sm: 12, md: 6 }}  container direction="column" spacing={2} sx={{ p: { xs: 2, sm:4, md: 0 }, pt: { xs: 0 } }} >

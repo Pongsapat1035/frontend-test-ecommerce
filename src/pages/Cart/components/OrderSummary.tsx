@@ -1,5 +1,9 @@
-import { Typography, Stack, Button, Link } from "@mui/material";
 import { useNavigate } from "react-router";
+
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 
 export default function OrderSummary({ subtotal } : { subtotal: number }) {
   const navigate = useNavigate();

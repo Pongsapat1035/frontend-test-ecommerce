@@ -8,6 +8,8 @@ import {  useNavigate } from "react-router";
 
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import HeroGrid from "./components/HeroGrid";
+import Recommend from "./components/Recommend";
+import EastRoundedIcon from '@mui/icons-material/EastRounded';
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -31,15 +33,19 @@ export default function HomePage() {
                     bgcolor: "secondary.main",
                     color: "primary.main",
                     borderRadius: 10,
-                    px: { xs: 3, sm:6 },
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    minWidth: { xs: 100, sm: 160 },
+                    px: { xs: 2 },
                   }}
                   onClick={() => navigate("/product")}>
-                  Shop now <ArrowOutwardRoundedIcon />
+                  Shop now <EastRoundedIcon />
                 </Button>
               </Grid>
             </Grid>
           </Grid>
           <HeroGrid></HeroGrid>
+          <Recommend></Recommend>
         </Grid>
       </Container>
     </Grid>

@@ -16,6 +16,7 @@ const steps = ["Create order", "Payment", "Shipping"];
 export default function CheckoutPage() {
   const { products } = useProduct();
   const [productLists, setProductLists] = useState<CheckoutProductData[]>([]);
+  const [subTotal, setSubtotal] = useState(0)
 
   const fetchProduct = () => {
     const result = localStorage.getItem("mycart");
@@ -38,6 +39,8 @@ export default function CheckoutPage() {
         return convertResult;
       }
     );
+     const sumTotalPrice = productLists.reduce((acc, curr)=> ( acc+ curr.totalPrice) ,0 )
+     setSubtotal(sumTotalPrice)
     setProductLists(productLists);
   };
 
@@ -92,7 +95,7 @@ export default function CheckoutPage() {
               ))}
             </Grid>
           </Grid>
-          <CustomerContract></CustomerContract>
+          <CustomerContract subtotal={subTotal}></CustomerContract>
         </Grid>
       </Container>
     </FormProvider>

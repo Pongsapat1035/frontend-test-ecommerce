@@ -1,6 +1,7 @@
-import { Grid, IconButton } from "@mui/material";
-import FilterTab from "../../pages/Products/components/FilterTab";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import FilterTab from "../../pages/Products/components/FilterTab";
 
 export default function MobileFilter({ closeFilter }: { closeFilter: Function }) {
   return (

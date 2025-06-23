@@ -1,16 +1,24 @@
-import { Stack, Typography, Grid, Box } from "@mui/material";
-import LogoIcon from "../../assets/interior.png";
 import { useNavigate } from "react-router";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import { styled } from "@mui/material/styles";
+import { useState } from "react";
+
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Badge, { badgeClasses } from "@mui/material/Badge";
-import SearchBox from "./SearchBox";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import UserMenu from "./UserMenu";
-import { useState } from "react";
-import { useCart } from "../../cartContext";
+
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import { styled } from "@mui/material/styles";
+
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+
+import LogoIcon from "../../assets/interior.png";
+import { useCart } from "../../cartContext";
+import SearchBox from "./SearchBox";
+import UserMenu from "./UserMenu";
+import MobileFilter from "./MobileFilter";
 
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {
@@ -18,11 +26,11 @@ const CartBadge = styled(Badge)`
     right: -6px;
   }
 `;
-import MobileFilter from "./MobileFilter";
+
 export default function Navbar() {
   const navigate = useNavigate();
   const [searchBarState, setSearchBarState] = useState(false);
-  const [filterState, setFilterState] = useState(false)
+  const [filterState, setFilterState] = useState(false);
   const { cartItem } = useCart();
 
   return (
@@ -91,7 +99,11 @@ export default function Navbar() {
           <SearchBox></SearchBox>
         </Box>
       </Grid>
-      {filterState ? <MobileFilter closeFilter={()=> setFilterState(false)}></MobileFilter> : ''}
+      {filterState ? (
+        <MobileFilter closeFilter={() => setFilterState(false)}></MobileFilter>
+      ) : (
+        ""
+      )}
     </Grid>
   );
 }

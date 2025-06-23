@@ -1,5 +1,5 @@
 import { Grid, Typography, Stack, Link } from "@mui/material";
-import { useEffect, type ReactElement } from "react";
+import {  type ReactElement } from "react";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import HeadsetOutlinedIcon from "@mui/icons-material/HeadsetOutlined";
 import SyncAltOutlinedIcon from "@mui/icons-material/SyncAltOutlined";
@@ -42,10 +42,6 @@ import { useQueryProduct } from "../../../queryContext";
 
 export default function FilterTab() {
   const { resetQuery } = useQueryProduct();
-
-  useEffect(() => {
-    resetQuery();
-  }, []);
 
   return (
     <>

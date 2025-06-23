@@ -23,7 +23,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
           position: "relative",
         }}
         image={data.images[0]}
-        title="green iguana">
+        title="product image">
         <Stack
           direction="row"
           spacing={1}

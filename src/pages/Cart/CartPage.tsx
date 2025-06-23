@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
+
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 import OrderSummary from "./components/OrderSummary";
 import ProductCartList from "./components/ProductCartList";
 import Navlink from "../../components/NavLink";
-import { useEffect, useState } from "react";
+
 import { useProduct } from "../../productContext";
 import type { CartItem, ProductData, ProductCartData } from "../../type";
-import { Divider } from "@mui/material";
 
 export default function CartPage() {
   const { products } = useProduct();
@@ -19,7 +21,7 @@ export default function CartPage() {
     const response = localStorage.getItem("mycart");
     const cart = response ? JSON.parse(response) : [];
 
-    const cartList:ProductCartData[] = cart.map((item: CartItem) => {
+    const cartList: ProductCartData[] = cart.map((item: CartItem) => {
       const { id, quantity } = item;
       const productIndex = products.findIndex((el) => el.id === id);
       const product = products[productIndex] as ProductData;
@@ -37,8 +39,11 @@ export default function CartPage() {
       return convertResult;
     });
 
-    const sumTotalPrice = cartList.reduce((acc, curr)=> ( acc+ curr.totalPrice) ,0 )
-    setTotalPrice(sumTotalPrice)
+    const sumTotalPrice = cartList.reduce(
+      (acc, curr) => acc + curr.totalPrice,
+      0
+    );
+    setTotalPrice(sumTotalPrice);
     setProductList(cartList);
   };
 
@@ -59,7 +64,7 @@ export default function CartPage() {
   }, [products]);
 
   return (
-    <Container disableGutters sx={{p: {xs:2, sm: 4,lg:0}}}>
+    <Container disableGutters sx={{ p: { xs: 2, sm: 4, lg: 0 } }}>
       <Grid container direction="column" spacing={3}>
         <Navlink currentPage="Cart"></Navlink>
         <Typography variant="h4" fontWeight="bold">
@@ -74,20 +79,31 @@ export default function CartPage() {
             pr={{ xs: 0, lg: 4 }}
             sx={{
               borderRadius: 2,
-              minHeight: { xs: 450, md: 600 },overflow: 'scroll'
+              minHeight: { xs: 450, md: 600 },
+              overflow: "scroll",
             }}>
-            {productList.map((data, index) => (
-              <>
-                <ProductCartList
-                  key={index}
-                  data={data}
-                  deleteCart={handleDeleteItem}></ProductCartList>
-                <Divider></Divider>
-              </>
-            ))}
+            {productList.length > 0 ? (
+              productList.map((data, index) => (
+                <>
+                  <ProductCartList
+                    key={index}
+                    data={data}
+                    deleteCart={handleDeleteItem}></ProductCartList>
+                  <Divider></Divider>
+                </>
+              ))
+            ) : (
+              <Typography
+                variant="h6"
+                textAlign="center"
+                color="text.secondary"
+                mt={6}>
+                Cart is empty
+              </Typography>
+            )}
           </Grid>
           <Grid
-            size={{ xs: 12, md:4 }}
+            size={{ xs: 12, md: 4 }}
             container
             direction="column"
             spacing={2}

@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import Stack from "@mui/material/Stack";
@@ -5,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 import { useQueryProduct } from "../../queryContext";
-import { useEffect, useState } from "react";
+
 
 export default function SearchBox() {
   const [searchText, setSearchText] = useState("");

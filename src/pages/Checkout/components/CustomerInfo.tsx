@@ -1,10 +1,20 @@
-import { Grid, Typography, Stack, Button, Divider } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+
 import ContractForm from "./ContractForm";
 
 import { useForm } from "../formContext";
-export default function CustomerContract() {
+import { useEffect, useState } from "react";
+
+export default function CustomerContract({ subtotal }: { subtotal: number }) {
   const { errorMsg, formData } = useForm();
+  const [isLodaing, setIsLoading] = useState(false);
+  const [vat, setVat] = useState(0);
   const handleSubmit = () => {
+    setIsLoading(true);
     const errorValues = Object.values(errorMsg);
     const formValues = Object.values(formData);
 
@@ -12,14 +22,32 @@ export default function CustomerContract() {
       errorValues.some((el) => el !== "") ||
       formValues.some((el) => el === "")
     ) {
-      alert("Please check payment detail again");
+      alert("Payment Fail, please try again");
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
       return;
     }
-    alert("Success");
+
+    alert("Payment Fail, please try again");
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
   };
 
+  useEffect(() => {
+    const getvat = (subtotal * 10) / 100;
+    setVat(getvat);
+  }, [subtotal]);
+
   return (
-    <Grid size={{ xs: 12,md:6 }} container spacing={2} p={4} direction="column" borderRadius={2}>
+    <Grid
+      size={{ xs: 12, md: 6 }}
+      container
+      spacing={2}
+      p={4}
+      direction="column"
+      borderRadius={2}>
       <Typography variant="h5" fontWeight="bold">
         Payment detail
       </Typography>
@@ -30,7 +58,7 @@ export default function CustomerContract() {
       <Stack direction="row" justifyContent="space-between">
         <Typography variant="body1">Subtotal</Typography>
         <Typography variant="body1" color="text.secondary">
-          $350
+          ${subtotal.toLocaleString()}
         </Typography>
       </Stack>
       <Stack direction="row" justifyContent="space-between">
@@ -38,16 +66,12 @@ export default function CustomerContract() {
           Vat (10%)
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          $34
+          ${vat}
         </Typography>
       </Stack>
       <Stack direction="row" justifyContent="space-between">
         <Typography variant="body1">Date</Typography>
-        <Typography variant="body1">12/12/2564</Typography>
-      </Stack>
-      <Stack direction="row" justifyContent="space-between">
-        <Typography variant="body1">No.</Typography>
-        <Typography variant="body1">12412weqw123</Typography>
+        <Typography variant="body1">12/12/2568</Typography>
       </Stack>
       <Divider></Divider>
       <Stack direction="row" justifyContent="space-between">
@@ -55,10 +79,10 @@ export default function CustomerContract() {
           Total
         </Typography>
         <Typography variant="h6" fontWeight="bold">
-          $450
+          ${(subtotal + vat).toLocaleString()}
         </Typography>
       </Stack>
-      <Button variant="contained" onClick={handleSubmit}>
+      <Button variant="contained" onClick={handleSubmit} loading={isLodaing}>
         Pay $450
       </Button>
     </Grid>

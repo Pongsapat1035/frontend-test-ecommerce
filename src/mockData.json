@@ -2,22 +2,10 @@
     "products": [
         {
             "id": 1,
-            "name": "Product1",
-            "no": "12355",
-            "collection": "Best Seller",
-            "material": ["wood"],
-            "images": ["https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-            "price": 123,
-            "description": "description",
-            "createAt": "2024-03-15",
-            "quantity": 20
-        },
-        {
-            "id": 2,
-            "name": "Product2",
-            "no": "12355",
+            "name": "Aurora Floor Lamp",
+            "no": "AFL-2024-001",
             "collection": "New Arrivals",
-            "material": ["metal"],
+            "material": ["metal", "fabric"],
             "images": [
                 "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 "https://plus.unsplash.com/premium_photo-1705169612225-c7f9e87430f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -30,16 +18,137 @@
             "quantity": 20
         },
         {
-            "id": 3,
-            "name": "Product3",
-            "no": "12355",
-            "collection": "Small Space",
-            "material": ["metal", "wood"],
-            "images": ["https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-            "price": 300,
+            "id": 2,
+            "name": "Comfort Zone Armchair",
+            "no": "CZA-2024-002",
+            "collection": "New Arrivals",
+            "material": ["wood", "fabric"],
+            "images": [
+                "https://images.unsplash.com/photo-1634148737510-727f137375e0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1579488085123-6a6a3630f0f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1619596662481-085e45d69762?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1631700679578-621a258507bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8"
+                 ],
+            "price": 220,
             "description": "description",
             "createAt": "2024-03-15",
-            "quantity": 15
+            "quantity": 20
+        },
+        {
+            "id": 3,
+            "name": "Nordic Dining Table",
+            "no": "NDT-2024-003",
+            "collection": "New Arrivals",
+            "material": ["wood"],
+            "images": [
+                "https://images.unsplash.com/photo-1581428982868-e410dd047a90?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1604061986761-d9d0cc41b0d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1602123116122-9b6e1695a670?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1676999260189-5412ac9aeb04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGFibGV8ZW58MHx8MHx8fDA%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },
+        {
+            "id": 4,
+            "name": "Luxe Velvet Sofa",
+            "no": "LVS-2024-004",
+            "collection": "New Arrivals",
+            "material": ["wood", "leather"],
+            "images": [
+                "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1614622350812-96b09c78af77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },
+        {
+            "id": 5,
+            "name": "Industrial Bar Stool",
+            "no": "IBS-2024-005",
+            "collection": "New Arrivals",
+            "material": ["wood", "fabric"],
+            "images": [
+                "https://plus.unsplash.com/premium_photo-1681345599459-8dac0feb3491?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1681412205503-46451f0f8bac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1681412205453-d75f5bc127f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1675186049302-a0dad4cf3412?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },
+         {
+            "id": 6,
+            "name": "Glass Coffee Table",
+            "no": "GCT-2024-006",
+            "collection": "New Arrivals",
+            "material": ["glass", "metal"],
+            "images": [
+                "https://plus.unsplash.com/premium_photo-1681344630018-2cbb60ea7702?q=80&w=759&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1681412205503-46451f0f8bac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1706560278067-b3fb6cba1e4c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1706559881959-226a83b2f4e9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },{
+            "id": 7,
+            "name": "Executive Office Desk",
+            "no": "EOD-2024-007",
+            "collection": "Small Space",
+            "material": ["wood", "metal"],
+            "images": [
+                "https://images.unsplash.com/photo-1491336440196-6d4fee45a05e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1681412205503-46451f0f8bac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1604074131665-7a4b13870ab4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1706559881959-226a83b2f4e9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },{
+            "id": 8,
+            "name": "Cozy Reading Chair",
+            "no": "CRC-2024-008",
+            "collection": "Budget Friendly",
+            "material": ["fabric"],
+            "images": [
+                "https://images.unsplash.com/photo-1639690305422-77b7e3d36a69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1681412205503-46451f0f8bac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+                "https://plus.unsplash.com/premium_photo-1706560278067-b3fb6cba1e4c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://plus.unsplash.com/premium_photo-1706559881959-226a83b2f4e9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
+        },{
+            "id": 9,
+            "name": "Modern TV Stand",
+            "no": "MTV-2024-009",
+            "collection": "Premium Luxury",
+            "material": ["glass", "wood"],
+            "images": [
+                "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1551907234-fb773fb08a2a?q=80&w=756&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "https://images.unsplash.com/photo-1534532282843-42c44341c2c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8",
+                "https://images.unsplash.com/photo-1570109639124-2bb5289c2649?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+                 ],
+            "price": 220,
+            "description": "description",
+            "createAt": "2024-03-15",
+            "quantity": 20
         }
     ]
 }

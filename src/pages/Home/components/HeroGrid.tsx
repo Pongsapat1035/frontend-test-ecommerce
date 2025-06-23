@@ -2,8 +2,18 @@ import { Grid, Box, Typography, IconButton } from "@mui/material";
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 export default function HeroGrid() {
   return (
-    <Grid container direction={ { xs: 'column', md: 'row' } } height={{ lg: 500 }} spacing={2}>
-      <Grid size={{ xs: 12, md: 6 }} container direction="column" height="100%" spacing={2}>
+    <Grid
+      container
+      direction={{ xs: "column", md: "row" }}
+      height={{ lg: 500 }}
+      spacing={2}>
+      <Grid
+        size={{ xs: 12, md: 6 }}
+        container
+        direction="column"
+        height="100%"
+        spacing={2}
+        sx={{ opacity: 0, animation: "fadeIn 1s forwards" }}>
         <Box
           sx={{
             height: 300,
@@ -12,7 +22,7 @@ export default function HeroGrid() {
             overflow: "hidden",
           }}>
           <img
-            src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
           />
         </Box>
@@ -25,23 +35,37 @@ export default function HeroGrid() {
             justifyContent="space-between"
             alignItems="end">
             <Typography variant="h6" fontWeight="bold">
-              Lorem ipsum dolor sit amet consectetur tempora dicta tempore cum
-              unde id.
+              CHANGING THE WAY PEOPLE DESING & SHOP FOR THEIR HOMES
             </Typography>
             <IconButton
               sx={{ bgcolor: "primary.main", color: "secondary.main" }}>
               <ArrowOutwardRoundedIcon />
             </IconButton>
           </Grid>
-          <Grid size={5} sx={{ borderRadius: 4, overflow: "hidden", display: { xs: 'none', lg: 'flex' } }}>
+          <Grid
+            size={5}
+            sx={{
+              borderRadius: 4,
+              overflow: "hidden",
+              display: { xs: "none", lg: "flex" },
+            }}>
             <img
-              src="https://plus.unsplash.com/premium_photo-1680452611888-cb3646489a59?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image"
             />
           </Grid>
         </Grid>
       </Grid>
-      <Grid size={{ md: 6, lg: 3 }} container spacing={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
+      <Grid
+        size={{ md: 6, lg: 3 }}
+        container
+        spacing={2}
+        sx={{
+          display: { xs: "none", md: "flex" },
+          opacity: 0,
+          animation: "fadeIn 1s forwards",
+          animationDelay: "1s",
+        }}>
         <Grid
           size={12}
           container
@@ -50,8 +74,7 @@ export default function HeroGrid() {
           justifyContent="space-between"
           alignItems="end">
           <Typography variant="h6" fontWeight="bold">
-            Lorem ipsum dolor sit amet consectetur tempora dicta tempore cum
-            unde id.
+            UNLEASH YOUR STYLE WITH OUR EXQUISITE FUNITURE COLLECTION
           </Typography>
           <IconButton sx={{ bgcolor: "primary.main", color: "secondary.main" }}>
             <ArrowOutwardRoundedIcon />
@@ -72,7 +95,16 @@ export default function HeroGrid() {
           </Box>
         </Grid>
       </Grid>
-      <Grid size={3} container spacing={2} sx={{ display: { xs: 'none', lg: 'flex' } }}>
+      <Grid
+        size={3}
+        container
+        spacing={2}
+        sx={{
+          display: { xs: "none", lg: "flex" },
+          opacity: 0,
+          animation: "fadeIn 1s forwards",
+          animationDelay: ".5s",
+        }}>
         <Grid size={12}>
           <Box
             sx={{
@@ -82,7 +114,7 @@ export default function HeroGrid() {
               overflow: "hidden",
             }}>
             <img
-              src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1636368208791-17b81ed832d2?q=80&w=729&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image"
             />
           </Box>
@@ -95,8 +127,7 @@ export default function HeroGrid() {
           justifyContent="space-between"
           alignItems="end">
           <Typography variant="h6" fontWeight="bold">
-            Lorem ipsum dolor sit amet consectetur tempora dicta tempore cum
-            unde id.
+            INTRODUCING OUR CAPTIVATING NEW ARRIVALS, 
           </Typography>
           <IconButton sx={{ bgcolor: "primary.main", color: "secondary.main" }}>
             <ArrowOutwardRoundedIcon />

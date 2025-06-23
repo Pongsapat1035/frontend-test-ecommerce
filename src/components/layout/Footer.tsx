@@ -1,11 +1,10 @@
-import {
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Stack,
-  Typography,
-} from "@mui/material";
+import Grid from "@mui/material/Grid";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
 import LogoIcon from "../../assets/interior.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -48,8 +47,18 @@ const iconStyle = {
 
 export default function Footer() {
   return (
-    <Grid container mt={12} pt={6} spacing={{ xs: 4, md: 0 }}>
-      <Grid size={{ xs: 12, sm: 6, md: 3 }} container direction="column" py={6} spacing={2}>
+    <Grid
+      container
+      mt={12}
+      pt={6}
+      spacing={{ xs: 4, md: 0 }}
+      sx={{ borderTop: 1, borderColor: "primary.light" }}>
+      <Grid
+        size={{ xs: 12, sm: 6, md: 3 }}
+        container
+        direction="column"
+        py={6}
+        spacing={2}>
         <Stack direction="row" spacing={2} justifyContent="center">
           <img src={LogoIcon} alt="icon" style={{ width: 50, height: 50 }} />
           <Typography
@@ -64,7 +73,10 @@ export default function Footer() {
         </Typography>
       </Grid>
       {footerContent.map((data, index) => (
-        <Grid size={{ xs: 12, sm: 6, md: 2 }} sx={{ p: { xs: 4, md: 0 } }} key={index}>
+        <Grid
+          size={{ xs: 12, sm: 6, md: 2 }}
+          sx={{ p: { xs: 4, md: 0 } }}
+          key={index}>
           <Typography variant="h6" fontWeight="bold">
             {data.name}
           </Typography>

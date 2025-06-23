@@ -10,12 +10,14 @@ import { useEffect, useState } from "react";
 import type { ProductData } from "../../type";
 import { useQueryProduct } from "../../queryContext";
 import type { SelectChangeEvent } from "@mui/material/Select";
+import ProductSkeletonCard from "../../components/skeleton/ProductSkeletonCard";
 
 export default function ProductListPage() {
   const [sortBy, setSortBy] = useState("new");
-  const { queryData, updateQuery, productLists } = useQueryProduct();
+  const { queryData, updateQuery, productLists, resetQuery } =
+    useQueryProduct();
   const [productList, setProductList] = useState<ProductData[]>([]);
-
+  const [isLodaing, setIsLoading] = useState(true);
   const handleSortChange = (e: SelectChangeEvent) => {
     const { value } = e.target;
     setSortBy(value);
@@ -23,8 +25,12 @@ export default function ProductListPage() {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     if (productLists) {
       setProductList(productLists);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
     }
   }, [productLists]);
 
@@ -32,6 +38,10 @@ export default function ProductListPage() {
     const { sortby } = queryData;
     setSortBy(sortby);
   }, [queryData]);
+
+  useEffect(() => {
+    resetQuery();
+  }, []);
 
   const productCardLists = productList.map((data, index) => (
     <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
@@ -61,11 +71,6 @@ export default function ProductListPage() {
         container
         direction="column">
         <Grid container alignItems="center" spacing={2}>
-          {/* <Grid container size={{ xs: 12, sm: 9 }} spacing={1}>
-            <Chip label="Chip Outlined" variant="outlined" />
-            <Chip label="Chip Outlined" variant="outlined" />
-            <Chip label="Chip Outlined" variant="outlined" />
-          </Grid> */}
           <Grid
             size={{ xs: 12, sm: 3 }}
             container
@@ -96,7 +101,11 @@ export default function ProductListPage() {
           </Grid>
         </Grid>
         <Grid container spacing={4}>
-          {productCardLists}
+          {isLodaing
+            ? new Array(9)
+                .fill("")
+                .map((_) => <ProductSkeletonCard></ProductSkeletonCard>)
+            : productCardLists}
         </Grid>
         <Grid
           container

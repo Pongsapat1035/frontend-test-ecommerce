@@ -1,13 +1,12 @@
-import {
-  Box,
-  Tooltip,
-  IconButton,
-  MenuItem,
-  Typography,
-  Menu,
-  Stack,
-} from "@mui/material";
 import { useState } from "react";
+
+import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
+import MenuItem from "@mui/material/MenuItem";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import Stack from "@mui/material/Stack";
 
 import AccountBoxOutlinedIcon from "@mui/icons-material/AccountBoxOutlined";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";

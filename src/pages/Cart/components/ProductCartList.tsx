@@ -1,11 +1,19 @@
-import { Grid, Box, Stack, Typography, IconButton } from "@mui/material";
-import QuantitySelector from "../../../components/QuantitySelector";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import type { ProductCartData } from "../../../type";
 import { useState } from "react";
-import { useCart } from "../../../cartContext";
 import { useNavigate } from "react-router";
+
+import { useCart } from "../../../cartContext";
+import type { ProductCartData } from "../../../type";
+import QuantitySelector from "../../../components/QuantitySelector";
+
 import LocalShippingRoundedIcon from '@mui/icons-material/LocalShippingRounded';
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
+
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+
 export default function ProductCartList({
   data,
   deleteCart,
@@ -67,7 +75,7 @@ export default function ProductCartList({
             <Typography variant="body1" color="text.secondary">
               #{data.no}
             </Typography>
-            <Stack direction="row" spacing={1} alignItems='center' borderRadius={2} p="4px" px="6px" bgcolor="#def9ea">
+            <Stack direction="row" spacing={1} alignItems='center' borderRadius={2} p="4px" px="6px" bgcolor="#def9ea" maxWidth={110}>
               <LocalShippingRoundedIcon sx={{ fontSize: 16, color: '#01642a' }} />
               <Typography variant="body1"  fontWeight="bold" fontSize=".7rem" color="#01642a">Free shipping</Typography>
             </Stack>
